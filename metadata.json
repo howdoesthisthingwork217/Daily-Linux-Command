@@ -1,0 +1,20 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Collin Syllaba",
+                "Email": "collin@syllaba.org"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "Shows today's command from dailylinuxcommand.com.",
+        "Icon": "utilities-terminal",
+        "Id": "org.collin.linuxcotd",
+        "Name": "Linux Command of the Day",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "1.0"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
