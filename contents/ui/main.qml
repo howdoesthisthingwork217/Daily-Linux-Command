@@ -29,7 +29,7 @@ PlasmoidItem {
         var day = String(d.getDate()).padStart(2, "0")
         return y + "-" + m + "-" + day
     }
-
+    //lord have mercy im dying 
     function fetchCommand() {
         loading = true
         errored = false
@@ -75,11 +75,6 @@ PlasmoidItem {
         }
     }
 
-    // Some environments never fire onreadystatechange/onerror at all if the
-    // request stalls at the connect stage. Without this, that leaves the
-    // spinner running forever with no visible failure. 10s is generous for
-    // a same-region HTTPS request; if it fires, abort and surface an error
-    // instead of hanging indefinitely.
     Timer {
         id: watchdogTimer
         property var xhrRef: null
@@ -103,10 +98,6 @@ PlasmoidItem {
         repeat: true
         onTriggered: root.fetchCommand()
     }
-
-    // Widget only needs a fresh pull once a day, but re-checking hourly is
-    // cheap since the server caches the day's result itself.
-
     compactRepresentation: MouseArea {
         Layout.minimumWidth: label.implicitWidth + Kirigami.Units.smallSpacing * 2
         Layout.minimumHeight: Kirigami.Units.iconSizes.small
